@@ -1,0 +1,61 @@
+@import "@fontsource/lato";
+@import "@fontsource/roboto";
+
+:root {
+	--font-body: "Roboto", sans-serif;
+	--font-head: "Lato", sans-serif;
+	--color-bg-0: rgb(255, 255, 255);
+	--color-text: rgb(0, 0, 0);
+	/* --theme-primary: #0F1538; */
+
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+body {
+	background-color: var(--color-bg-0);
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	/* margin: 0 1rem; */
+	margin: 0;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text);
+}
+
+h1, h2, h3 {
+	font-family: var(--font-head);
+	color: var(--color-text);
+}
+
+h1 {
+	font-size: 3rem;
+	/* margin: 1rem 0 2rem 0; */
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+input,
+button {
+	font-size: inherit;
+	font-family: inherit;
+	color: var(--color-text)
+}
+
+
+
+button:focus:not(:focus-visible) {
+	outline: none;
+}
