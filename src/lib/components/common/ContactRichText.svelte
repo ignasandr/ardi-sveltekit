@@ -91,4 +91,10 @@
     padding-left: 0;
     text-align: justify;
   }
+
+  @media (max-width: 360px) {
+    .rich-text {
+      font-size: 1rem;
+    }
+  }
 </style>

@@ -45,7 +45,7 @@
 <style>
   section {
     width: 100%;
-    margin-top: 6rem;
+    /* margin-top: 6rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +83,7 @@
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 2rem 5rem;
+    padding: 2rem 4rem;
   }
 
   .contact-requisites {
@@ -101,5 +101,41 @@
     width: 2rem;
     height: 2rem;
     margin-right: 0.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .container-bg {
+      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
+      clip-path: inset(0 10% 0 10%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container-bg {
+      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
+      clip-path: inset(0 20% 0 20%);
+    }
+  }
+
+  @media (max-width: 540px) {
+    .container-bg {
+      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
+      clip-path: inset(0 30% 0 30%);
+    }
+
+    .contacts {
+      padding: 2rem 2rem;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .container-bg {
+      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
+      clip-path: inset(0 33% 0 33%);
+    }
+
+    .contacts {
+      padding: 1rem 1.5rem;
+    }
   }
 </style>
