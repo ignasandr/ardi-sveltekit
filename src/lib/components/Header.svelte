@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { hover } from "$lib/stores";
   import Line from "$lib/components/common/Line.svelte";
   import logo from "$lib/assets/logo.svg";
   export let menuItems: { catalog: { title: string; slug: string } }[];
@@ -14,8 +15,11 @@
     <Line />
   </div>
   <nav>
-    {#each menuItems as item}
-      <a href="/catalogs/{item.catalog.slug}">{item.catalog.title}</a>
+    {#each menuItems as item, i}
+      <a
+        href="/catalogs/{item.catalog.slug}"
+        on:mouseenter={() => hover.set(i + 1)}>{item.catalog.title}</a
+      >
     {/each}
   </nav>
 </div>

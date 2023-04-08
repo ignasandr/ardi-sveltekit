@@ -42,8 +42,27 @@
     align-items: center;
     flex-direction: column;
   }
+  @media (max-width: 1200px) {
+    header {
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    header {
+      margin-top: 3rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    header {
+      margin-top: 4rem;
+    }
+  }
 
   @media (max-width: 480px) {
+    header {
+      margin-top: 5rem;
+    }
     main {
       padding: 0 0.5rem;
     }
