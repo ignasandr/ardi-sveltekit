@@ -28,10 +28,46 @@
     align-items: center;
   }
 
-  @media (max-width: 900px) {
+  .image {
+    width: 100%;
+    margin: 0 calc(25% - 20px);
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 1400px) {
     .image {
       width: 100%;
-      height: 100%;
+      margin: 0 calc(22%);
+    }
+  }
+  @media (max-width: 1200px) {
+    .image {
+      width: 100%;
+      margin: 0 calc(19%);
+    }
+  }
+  @media (max-width: 1024px) {
+    .image {
+      width: 100%;
+      margin: 0 calc(14%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .image {
+      width: 100%;
+      margin: 0 calc(8%);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .image {
+      width: 100%;
+      margin: 0;
     }
   }
 </style>

@@ -1,14 +1,43 @@
 <script lang="ts">
+  import Line from "$lib/components/common/Line.svelte";
+  import logo from "$lib/assets/logo.svg";
   export let menuItems: { catalog: { title: string; slug: string } }[];
 </script>
 
-<nav>
-  {#each menuItems as item}
-    <a href="/catalogs/{item.catalog.slug}">{item.catalog.title}</a>
-  {/each}
-</nav>
+<div class="header-container">
+  <div class="logo">
+    <a href="/">
+      <img src={logo} alt="logo" />
+    </a>
+  </div>
+  <div class="line">
+    <Line />
+  </div>
+  <nav>
+    {#each menuItems as item}
+      <a href="/catalogs/{item.catalog.slug}">{item.catalog.title}</a>
+    {/each}
+  </nav>
+</div>
 
 <style>
+  .header-container {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logo {
+    width: 8.5rem;
+    /* height: 10rem; */
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+  }
   nav {
     width: 42rem;
     display: flex;
