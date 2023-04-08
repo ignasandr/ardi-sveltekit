@@ -45,7 +45,7 @@
 <style>
   section {
     width: 100%;
-    /* margin-top: 6rem; */
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,20 +54,19 @@
 
   .container {
     position: relative;
-    width: 900px;
-    height: 460px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .container-bg {
+  /* .container-bg {
     position: absolute;
     width: 100%;
     height: 100%;
     background-position: center;
     z-index: -1;
-  }
+  } */
 
   .contacts-container {
     height: 100%;
@@ -103,39 +102,10 @@
     margin-right: 0.75rem;
   }
 
-  @media (max-width: 900px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 10% 0 10%);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 20% 0 20%);
-    }
-  }
-
-  @media (max-width: 540px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 30% 0 30%);
-    }
-
-    .contacts {
-      padding: 2rem 2rem;
-    }
-  }
-
-  @media (max-width: 360px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 33% 0 33%);
-    }
-
-    .contacts {
-      padding: 1rem 1.5rem;
+  @media (max-width: 960px) {
+    .container {
+      width: 100%;
+      height: 120%;
     }
   }
 </style>

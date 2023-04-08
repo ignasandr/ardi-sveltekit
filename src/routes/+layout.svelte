@@ -3,6 +3,7 @@
   import Line from "$lib/components/common/Line.svelte";
   import logo from "$lib/assets/logo.svg";
   import "./styles.css";
+  import Footer from "$lib/components/Footer.svelte";
 
   export let data: {
     menu: {
@@ -11,8 +12,6 @@
       };
     };
   };
-
-  console.log(data);
 
   const { menuItems } = data.menu.data.Menu;
 </script>
@@ -31,6 +30,9 @@
 <main>
   <slot />
 </main>
+<div class="footer-container">
+  <Footer />
+</div>
 
 <style>
   .header-container {
@@ -52,5 +54,18 @@
   }
   main {
     padding: 0 1rem;
+  }
+
+  .footer-container {
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @media (max-width: 480px) {
+    main {
+      padding: 0 0.5rem;
+    }
   }
 </style>

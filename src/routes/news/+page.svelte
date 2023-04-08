@@ -57,7 +57,13 @@
     width: 15rem;
   }
 
+  .body {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
   .body h2 {
+    font-size: 1.5rem;
     margin-top: 1rem;
   }
 
@@ -78,7 +84,7 @@
     }
 
     .body h2 {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
 

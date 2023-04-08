@@ -28,10 +28,10 @@ export interface Contact {
 
 export interface Catalog {
   id: string;
-  title?: string;
-  items?: {
-    image?: string | Image;
-    id?: string;
+  title: string;
+  items: {
+    image: Image;
+    id: string;
   }[];
   createdAt: string;
   updatedAt: string;
