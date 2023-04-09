@@ -5,7 +5,7 @@ export async function load({ params }) {
   const { slug } = params;
 
   try {
-    return await fetch("http://localhost:3000/api/graphql", {
+    return await fetch("https://litas.online/api/graphql", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

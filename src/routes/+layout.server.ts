@@ -4,7 +4,7 @@ import { redirect } from "@sveltejs/kit";
 export async function load() {
   try {
     return {
-      menu: await fetch("http://localhost:3000/api/graphql", {
+      menu: await fetch(`https://litas.online/api/graphql`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
