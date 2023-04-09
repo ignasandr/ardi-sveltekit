@@ -1,4 +1,5 @@
 <script lang="ts">
+  import backgroundImg from "$lib/assets/background.jpg";
   import emailIcon from "$lib/assets/email.svg";
   import tel1Icon from "$lib/assets/tel1.svg";
   import tel2Icon from "$lib/assets/tel2.svg";
@@ -10,8 +11,10 @@
 </script>
 
 <section>
-  <div class="container">
-    <img class="container-bg" src={background.url} alt={background.alt} />
+  <div class="container" style="background-image: url({backgroundImg})">
+    <!-- <div class="image">
+      <img class="container-bg" src={background.url} alt={background.alt} />
+    </div> -->
     <div class="contacts-container">
       <div class="contacts">
         <div class="contact-requisites">
@@ -54,19 +57,13 @@
 
   .container {
     position: relative;
-    width: 900px;
-    height: 550px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .container-bg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    background-repeat: no-repeat;
     background-position: center;
-    z-index: -1;
   }
 
   .contacts-container {
@@ -103,37 +100,13 @@
     margin-right: 0.75rem;
   }
 
-  @media (max-width: 900px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 10% 0 10%);
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 20% 0 20%);
-    }
-  }
-
   @media (max-width: 540px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 30% 0 30%);
-    }
-
     .contacts {
       padding: 2rem 2rem;
     }
   }
 
   @media (max-width: 360px) {
-    .container-bg {
-      /* clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%); */
-      clip-path: inset(0 33% 0 33%);
-    }
-
     .contacts {
       padding: 1rem 1.5rem;
     }
