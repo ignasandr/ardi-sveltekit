@@ -9,7 +9,7 @@
   let hoverActive: number = 0;
 
   const { menuItems } = data.data.Menu;
-
+  // test
   hover.subscribe((value) => {
     hoverActive = value;
   });
