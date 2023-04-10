@@ -14,7 +14,7 @@
   const { menuItems } = data.menu.data.Menu;
 </script>
 
-<header>
+<div class="container">
   <Header {menuItems} />
   <main>
     <slot />
@@ -22,13 +22,14 @@
   <div class="footer-container">
     <Footer />
   </div>
-</header>
+</div>
 
 <style>
-  header {
+  .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 3vh;
     /* align-items: center; */
   }
   main {
@@ -42,7 +43,7 @@
     align-items: center;
     flex-direction: column;
   }
-  @media (max-width: 1200px) {
+  /* @media (max-width: 1200px) {
     header {
       margin-top: 2rem;
     }
@@ -57,12 +58,12 @@
     header {
       margin-top: 4rem;
     }
-  }
+  } */
 
   @media (max-width: 480px) {
-    header {
+    /* header {
       margin-top: 5rem;
-    }
+    } */
     main {
       padding: 0 0.5rem;
     }

@@ -48,7 +48,7 @@
 <style>
   section {
     width: 100%;
-    /* margin-top: 6rem; */
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +58,7 @@
   .container {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     align-items: center;
