@@ -4,7 +4,7 @@
   import type { Catalog } from "$lib/types";
   import { onMount } from "svelte";
   export let data: { data: { Menu: { menuItems: { catalog: Catalog }[] } } };
-
+  // just checking if it works
   // let isLoading = true;
   let hoverActive: number = 0;
 
