@@ -14,6 +14,10 @@
   const { menuItems } = data.menu.data.Menu;
 </script>
 
+<svelte:head>
+	<title>ARDI</title>
+</svelte:head>
+
 <div class="container">
   <Header {menuItems} />
   <main>

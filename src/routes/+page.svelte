@@ -21,12 +21,12 @@
 </script>
 
 <section>
-  <div class={`image ${hoverActive === 0 ? "visible" : "invisible"}`}>
+  <div class={`image ${hoverActive === 0 ? "visible fadeIn" : "invisible"}`}>
     <img src={front} alt="front" />
   </div>
   {#each menuItems as item, i}
     <div class={`image ${i + 1 === hoverActive ? "visible" : "invisible"}`}>
-      <img
+      <img class={i + 1 === hoverActive ? "imgVisible" : "imgInvisible"}
         src={item.catalog.items[0].image.url}
         alt={item.catalog.items[0].image.alt}
       />
@@ -46,7 +46,7 @@
   .image {
     width: 100%;
     margin: 0 calc(25% - 20px);
-    transition: visibility 0s, opacity 0.5s ease-in-out;
+    transition: opacity 0.5s 1ms ease-in-out;
   }
 
   .image img {
@@ -55,13 +55,20 @@
   }
 
   .visible {
-    display: block;
-    opacity: 1;
+    display: block
   }
 
   .invisible {
     display: none;
-    opacity: 0;
+  }
+
+  @-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+  @keyframes fadeIn {
+      from { opacity: 0; }
+        to { opacity: 1; }
   }
 
   @media (max-width: 1400px) {

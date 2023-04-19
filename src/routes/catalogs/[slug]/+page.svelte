@@ -1,9 +1,10 @@
 <script lang="ts">
   import type { Catalog } from "$lib/types";
-  import { Autoplay } from "swiper";
+  import { Autoplay, Navigation } from "swiper";
   import { Swiper, SwiperSlide } from "swiper/svelte";
   import { onMount } from "svelte";
   import "swiper/css";
+  import "swiper/css/navigation";
   export let data: { data: { Catalogs: { docs: Catalog[] } } };
   let isLoading = true;
   let innerWidth: number;
@@ -19,12 +20,13 @@
 
 {#key data.data.Catalogs.docs}
   <Swiper
-    modules={[Autoplay]}
+    modules={[Autoplay, Navigation]}
     slidesPerView={1}
     centeredSlides={true}
     loop={true}
     spaceBetween={5}
     autoplay={true}
+    navigation={true}
     breakpoints={{
       480: {
         slidesPerView: 1,
