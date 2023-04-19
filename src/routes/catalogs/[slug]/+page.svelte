@@ -59,6 +59,10 @@
 {/key}
 
 <style>
+
+  :root {
+    --swiper-theme-color: #000;
+  }
   .image {
     width: 100%;
     height: 100%;
